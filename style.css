@@ -1,0 +1,178 @@
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Fixing images*/
+.plane-pic {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    padding-left: 4px;
+    padding-right: 8px
+}
+/* removing some of the default styling and chanding the typography and text styles*/
+
+a {color: #0d00ff;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+}
+
+/*text styles*/
+
+body {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f5f7fc;
+    margin: 16px;
+    margin-top: 80px;
+}
+
+p {
+    color: #3b3b3b;
+    font-size: 16px;
+}
+
+h1 {
+    color: #202020;
+    font-size: 32px;
+}
+
+h2 {
+    color: #202020;
+    font-size: 24px;
+}
+
+h3 {
+    color: #202020;
+    font-size: 20px;
+}
+
+
+/* experimenting with flex boxes, need some fixes and I've only done it for the navigation bar to test it*/
+
+nav {
+    background-color: #f8fafe;
+    box-shadow: 0px 2px 5px #0000001a;
+
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+/*this is the section that contains the Mobile app, About us and Contact us links*/
+.nav-links-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* actual links to the other main pages, changing the styles here since they're hyperlinks within an UL */
+
+.nav-links {
+    color: #000000;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+/*log in and sign up*/
+
+.auth-links {
+    color: #202020;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+/*Footer*/
+
+footer {
+    background-color: #d4d4d4;
+    margin-top: 36px;
+    padding: 8px;
+}
+
+.footer-links-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-links
+{ color: #535252;
+    font-style: normal;
+    padding: 8px;
+}
+
+/* body styling*/
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* body styling for tablets and desktop*/
+
+@media (min-width: 600px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "header-text-container plane-pic"
+    }
+
+    .header-text-container {
+    grid-area: header-text-container;
+    }
+
+    .plane-pic {
+        grid-area: plane-pic;
+    }
+
+    #app-features-summary1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+                            "feature1 feature2 feature3"
+                            "feature4 feature5 feature5"
+    }
+
+    .feature1 {
+        grid-area: feature1;
+    }
+
+    .feature2 {
+        grid-area: feature2;
+    }
+
+    .feature3 {
+        grid-area: feature3;
+    }
+
+    .feature4 {
+        grid-area: feature4;
+    }
+
+    .feature5 {
+        grid-area: feature5;
+    }
+
+}
